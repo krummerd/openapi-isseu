@@ -1,0 +1,18 @@
+server:
+  port: 8880
+
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      routes:
+        - id: user
+          uri: http://localhost:8881
+          predicates:
+            - Path=/user/**
+          filters:
+            - RewritePath=/user(?<segment>/?.*), $\{segment}
+#logging:
+#  level:
+#    org.springframework.cloud: trace

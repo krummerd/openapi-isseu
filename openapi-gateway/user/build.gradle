@@ -1,0 +1,11 @@
+plugins {
+    id 'org.springframework.boot' version "2.3.0.RELEASE"
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'java'
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation "org.springdoc:springdoc-openapi-webmvc-core:1.4.0"
+	implementation "org.springdoc:springdoc-openapi-ui:1.4.0"
+}

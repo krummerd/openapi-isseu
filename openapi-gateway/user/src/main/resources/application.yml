@@ -1,0 +1,17 @@
+server:
+  port: 8881
+
+spring:
+  application:
+    name: user
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /docs
+  group-configs:
+    - group: profile
+      paths-to-match: /profile/**
+    - group: job
+      paths-to-match: /job/**
